@@ -16,8 +16,7 @@ export function Search({ handleClick }: ISearchProps) {
     handleClick(input);
   };
   return (
-  <form onSubmit={(e: React.FormEvent<HTMLFormElement>) => handleSubmit(e)}>
-    <Box component="form" noValidate sx={{ mt: 1 }} >
+    <Box component="form" noValidate sx={{ mt: 1 }} onSubmit={(e: React.FormEvent<HTMLFormElement>) => handleSubmit(e)} >
       <TextField
         margin="normal"
         required
@@ -39,6 +38,5 @@ export function Search({ handleClick }: ISearchProps) {
         Search
       </Button>
     </Box>
-    </form>
   );
 }

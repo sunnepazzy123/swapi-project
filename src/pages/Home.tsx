@@ -29,6 +29,9 @@ export function Home() {
     }, [input]);
 
     const handleClick = (input: string) => {
+        if(!input) {
+            return;
+        }
         setInput(input);
     };
 
